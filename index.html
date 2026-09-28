@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Jefferzon &amp; Eva · 05·09·MMXXVI</title>
+  <title>Jefferzon &amp; Eva · 05·09·2026</title>
   <meta name="description" content="Estás invitado a la boda de Jefferzon &amp; Eva. 05 de Septiembre 2026, Hempstead, New York. Una noche que jamás olvidarás." />
 
   <!-- ── Open Graph — card bonita en WhatsApp, iMessage, Telegram ── -->
   <meta property="og:type"        content="website" />
-  <meta property="og:title"       content="💍 Jefferzon &amp; Eva · 05 · IX · MMXXVI" />
+  <meta property="og:title"       content="💍 Jefferzon &amp; Eva · 05 · IX · 2026" />
   <meta property="og:description" content="Nos casamos y queremos que estés ahí. Una noche especial en Hempstead, New York — 05 de Septiembre 2026 · Abre tu invitación ✉️" />
   <meta property="og:image"       content="sobre.png" />
   <meta property="og:image:width"  content="1200" />
@@ -17,7 +17,7 @@
 
   <!-- ── Twitter / X card ── -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="💍 Jefferzon &amp; Eva · 05 · IX · MMXXVI" />
+  <meta name="twitter:title"       content="💍 Jefferzon &amp; Eva · 05 · IX · 2026" />
   <meta name="twitter:description" content="Nos casamos y queremos que estés ahí — 05 de Septiembre 2026, Hempstead NY ✉️" />
   <meta name="twitter:image"       content="sobre.png" />
 
@@ -2700,6 +2700,71 @@
       padding-left: 4px;
       text-transform: uppercase;
     }
+
+    /* ── GALERÍA WHEEL 3D ──────────────────────────── */
+    #galeria {
+      padding: 72px 28px 80px;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--champagne) 100%);
+      text-align: center;
+      overflow: visible;
+      position: relative;
+    }
+    .wheel-scene {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      margin: 40px auto 0;
+      perspective: 1400px;
+      transform-style: preserve-3d;
+      overflow: visible;
+    }
+    .wheel-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      cursor: grab;
+    }
+    .wheel-ring.dragging { cursor: grabbing; }
+    .wheel-card {
+      position: absolute;
+      width: 200px;
+      height: 280px;
+      left: 50%;
+      top: 50%;
+      margin-left: -100px;
+      margin-top: -140px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(184,150,106,.30);
+      box-shadow: 0 12px 40px rgba(184,150,106,.22);
+      user-select: none;
+    }
+    .wheel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      pointer-events: none;
+    }
+    .gal-hint {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      color: var(--accent);
+      margin-top: 24px;
+      opacity: .8;
+    }
+    .gal-header-ornament {
+      width: 60px;
+      height: 2px;
+      background: var(--accent);
+      margin: 16px auto 0;
+      opacity: .5;
+    }
   </style>
 </head>
 <body>
@@ -2788,7 +2853,7 @@
           <span class="hero-line" data-name="Eva"></span>
         </h1>
         <div class="hero-ornament-bottom" id="hero-orn-bottom" aria-hidden="true"></div>
-        <p class="hero-date"  id="hero-date">05 · Septiembre · MMXXVI</p>
+        <p class="hero-date"  id="hero-date">05 · Septiembre · 2026</p>
         <p class="hero-city"  id="hero-city">Hempstead · New York</p>
       </div>
 
@@ -3061,65 +3126,49 @@
         <div class="tl-row" data-side="left" role="listitem">
           <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
           <div class="tl-row-inner">
-            <p class="tl-t">2:00 PM</p>
-            <p class="tl-ev">Ceremonia Religiosa</p>
-            <p class="tl-de">Our Lady of Loretto Church</p>
+            <p class="tl-ev">Ceremonia</p>
           </div>
         </div>
         <div class="tl-row" data-side="right" role="listitem">
           <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
           <div class="tl-row-inner">
-            <p class="tl-t">3:30 PM</p>
-            <p class="tl-ev">Cóctel de Bienvenida</p>
-            <p class="tl-de">Brindis con los novios</p>
-          </div>
-        </div>
-        <div class="tl-row" data-side="left" role="listitem">
-          <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-          <div class="tl-row-inner">
-            <p class="tl-t">6:00 PM</p>
             <p class="tl-ev">Recepción</p>
-            <p class="tl-de">Centro de Formación Mons. Arnulfo Romero</p>
-          </div>
-        </div>
-        <div class="tl-row" data-side="right" role="listitem">
-          <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
-          <div class="tl-row-inner">
-            <p class="tl-t">7:30 PM</p>
-            <p class="tl-ev">Cena</p>
-            <p class="tl-de">Menú especial · Servicio en mesa</p>
           </div>
         </div>
         <div class="tl-row" data-side="left" role="listitem">
           <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
           <div class="tl-row-inner">
-            <p class="tl-t">8:30 PM</p>
             <p class="tl-ev">Primer Baile</p>
-            <p class="tl-de">El vals de Jefferzon &amp; Eva</p>
           </div>
         </div>
         <div class="tl-row" data-side="right" role="listitem">
           <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
           <div class="tl-row-inner">
-            <p class="tl-t">9:30 PM</p>
-            <p class="tl-ev">Baile General</p>
-            <p class="tl-de">¡Todos a la pista!</p>
+            <p class="tl-ev">Brindis</p>
           </div>
         </div>
         <div class="tl-row" data-side="left" role="listitem">
           <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
           <div class="tl-row-inner">
-            <p class="tl-t">11:00 PM</p>
-            <p class="tl-ev">Brindis</p>
-            <p class="tl-de">Por los novios · Por el amor</p>
+            <p class="tl-ev">Cena</p>
           </div>
         </div>
         <div class="tl-row" data-side="right" role="listitem">
           <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
           <div class="tl-row-inner">
-            <p class="tl-t">12:00 AM</p>
-            <p class="tl-ev">¡Fiesta!</p>
-            <p class="tl-de">¡Que comience la celebración!</p>
+            <p class="tl-ev">Baile General</p>
+          </div>
+        </div>
+        <div class="tl-row" data-side="left" role="listitem">
+          <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
+          <div class="tl-row-inner">
+            <p class="tl-ev">Sorpresa</p>
+          </div>
+        </div>
+        <div class="tl-row" data-side="right" role="listitem">
+          <div class="tl-orn"></div><div class="tl-pulse"></div><div class="tl-dot"></div>
+          <div class="tl-row-inner">
+            <p class="tl-ev">Despedida</p>
           </div>
         </div>
       </div>
@@ -3154,28 +3203,14 @@
         </svg>
         <div class="rd-line"></div>
       </div>
-      <p class="dc-note fu">Tonos cálidos · Una noche de elegancia y amor</p>
-
-      <div class="swatches" role="list" aria-label="Paleta de colores sugerida">
+      <div class="swatches" role="list" aria-label="Color a evitar" style="justify-content:center">
         <div class="swatch" role="listitem">
-          <div class="sw-circle" style="background:#DDA9A0" aria-label="Rosa Blush"></div>
-          <span class="sw-name">Blush</span>
-        </div>
-        <div class="swatch" role="listitem">
-          <div class="sw-circle" style="background:#B8966A" aria-label="Dorado Suave"></div>
-          <span class="sw-name">Dorado</span>
-        </div>
-        <div class="swatch" role="listitem">
-          <div class="sw-circle" style="background:#C8A882" aria-label="Nude"></div>
-          <span class="sw-name">Nude</span>
-        </div>
-        <div class="swatch" role="listitem">
-          <div class="sw-circle" style="background:#8A9E82" aria-label="Verde Sage"></div>
-          <span class="sw-name">Sage</span>
+          <div class="sw-circle" style="background:#FFFFFF;border:2px solid rgba(200,168,130,0.4)" aria-label="Blanco"></div>
+          <span class="sw-name">Blanco</span>
         </div>
       </div>
 
-      <p class="dc-avoid fu">Por favor evitar el blanco (reservado para la novia)</p>
+      <p class="dc-avoid fu">Evitar color blanco para la novia</p>
     </section>
 
     <!-- ── 7. FAMILIA ──────────────────────────────── -->
@@ -3395,6 +3430,25 @@
       <a class="album-link fu" href="https://drive.google.com/drive/folders/1CSGB_k5qDrafPUP3MX3o0nHMjKidKOwO?usp=sharing" target="_blank" rel="noopener noreferrer">Abrir álbum en Google Drive</a>
     </section>
 
+    <!-- ── GALERÍA ──────────────────────────────── -->
+    <section id="galeria" aria-label="Galería de fotos">
+      <p class="label fu">Nuestros recuerdos</p>
+      <h2 class="title fu">Momentos <span style="font-family:var(--script);color:var(--accent);font-size:42px;">juntos</span></h2>
+      <div class="gal-header-ornament fu"></div>
+      <div class="wheel-scene rv" id="wheel-scene">
+        <div class="wheel-ring" id="wheel-ring">
+          <div class="wheel-card"><img src="foto-1.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+          <div class="wheel-card"><img src="foto-2.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+          <div class="wheel-card"><img src="foto-3.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+          <div class="wheel-card"><img src="foto-4.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+          <div class="wheel-card"><img src="foto-5.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+          <div class="wheel-card"><img src="foto-6.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+          <div class="wheel-card"><img src="foto-7.jpg" alt="Jefferzon y Eva" loading="lazy" /></div>
+        </div>
+      </div>
+      <p class="gal-hint rv">Arrastra para girar</p>
+    </section>
+
     <!-- ── 9. COMPARTIR INVITACIÓN ───────────────── -->
     <section id="rsvp" aria-label="Confirmación de asistencia">
       <svg class="rose-watermark xl" style="top:28%;right:-70px;transform:rotate(14deg)" viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M50 84 C30 70 10 55 10 34 C10 22 20 13 31 13 C40 13 46 17 50 23 C54 17 60 13 69 13 C80 13 90 22 90 34 C90 55 70 70 50 84 Z"/></svg>
@@ -3412,7 +3466,7 @@
 
       <p class="label fu">Confirmación de asistencia</p>
       <h2 class="title rsvp-title fu">R<span class="rsvp-title-script">·</span>S<span class="rsvp-title-script">·</span>V<span class="rsvp-title-script">·</span>P</h2>
-      <p class="subtitle fu">Confírmanos antes del<br><em style="font-style:italic;color:var(--accent)">10 de Agosto de 2026</em></p>
+      <p class="subtitle fu">Confírmanos antes del<br><em style="font-style:italic;color:var(--accent)">20 de Agosto de 2026</em></p>
 
       <form id="rsvpForm" class="rsvp-x" onsubmit="return false;" novalidate>
         <div class="fg fu" id="fg1">
@@ -3472,7 +3526,7 @@
   <!-- ── FOOTER ──────────────────────────────────── -->
   <footer aria-label="Pie de página">
     <p class="ft-names">Jefferzon &amp; Eva</p>
-    <p class="ft-date">05 · Septiembre · MMXXVI · Hempstead, NY</p>
+    <p class="ft-date">05 · Septiembre · 2026 · Hempstead, NY</p>
     <div class="ft-rule"></div>
     <p class="ft-tagline">Con amor · Para siempre</p>
 
@@ -4403,7 +4457,82 @@
       setTimeout(function () { btn.textContent = orig; }, 2200);
     });
   });
+
+  /* ── GALERÍA WHEEL 3D ──────────────────────────── */
+  (function initWheel() {
+    var ring = document.getElementById('wheel-ring');
+    if (!ring) return;
+    var cards = ring.querySelectorAll('.wheel-card');
+    var n = cards.length;
+    if (!n) return;
+    var radius = 260;
+    var rot = 0, vel = 0, isDrag = false, startX = 0, startRot = 0, lastX = 0, rafId = null;
+
+    cards.forEach(function (card, i) {
+      card.style.transform = 'rotateY(' + (360 / n * i) + 'deg) translateZ(' + radius + 'px)';
+    });
+
+    function setRot() { gsap.set(ring, { rotateY: rot }); }
+    setRot();
+
+    function inertia() {
+      if (isDrag) return;
+      rot += vel;
+      vel *= 0.94;
+      setRot();
+      if (Math.abs(vel) > 0.05) {
+        rafId = requestAnimationFrame(inertia);
+      }
+    }
+
+    function pointerDown(x) { isDrag = true; ring.classList.add('dragging'); startX = x; lastX = x; startRot = rot; vel = 0; if (rafId) cancelAnimationFrame(rafId); }
+    function pointerMove(x) { if (!isDrag) return; rot = startRot + (x - startX) * 0.45; vel = (x - lastX) * 0.5; lastX = x; setRot(); }
+    function pointerUp() { if (!isDrag) return; isDrag = false; ring.classList.remove('dragging'); rafId = requestAnimationFrame(inertia); }
+
+    ring.addEventListener('mousedown', function (e) { e.preventDefault(); pointerDown(e.clientX); });
+    window.addEventListener('mousemove', function (e) { pointerMove(e.clientX); });
+    window.addEventListener('mouseup', pointerUp);
+    ring.addEventListener('touchstart', function (e) { pointerDown(e.touches[0].clientX); }, { passive: true });
+    ring.addEventListener('touchmove', function (e) { pointerMove(e.touches[0].clientX); }, { passive: true });
+    ring.addEventListener('touchend', pointerUp);
+
+    var auto = true;
+    (function spin() {
+      if (auto && !isDrag) { rot += 0.12; setRot(); }
+      requestAnimationFrame(spin);
+    })();
+    ring.addEventListener('mousedown', function () { auto = false; });
+    ring.addEventListener('touchstart', function () { auto = false; });
+  })();
   </script>
 
+<script>
+/* ELYSIUM AUDIO UNLOCK v1 — la musica se estrena DENTRO del primer gesto real del invitado.
+   iOS/Chrome retiran el permiso del gesto a los pocos ms, asi que un play() que corre al
+   terminar el video del sobre llega tarde y es rechazado en silencio. */
+(function(){
+  if(window.__elyAudioUnlock) return; window.__elyAudioUnlock=1;
+  var done=false, tries=0;
+  function A(){ return document.querySelector('audio'); }
+  function unlock(){
+    if(done) return;
+    var a=A(); if(!a) return;
+    try{ if(a.preload==='none'){ a.preload='auto'; a.load(); } }catch(e){}
+    if(!a.paused){ done=true; return; }
+    var p;
+    try{ p=a.play(); }catch(e){ return; }
+    if(p && p.then){ p.then(function(){ done=true; }).catch(function(){}); }
+    else { done=true; }
+  }
+  ['pointerdown','touchstart','touchend','click','keydown'].forEach(function(ev){
+    document.addEventListener(ev, unlock, {capture:true, passive:true});
+  });
+  var iv=setInterval(function(){
+    var a=A();
+    if(done || (a && !a.paused)){ done=true; clearInterval(iv); return; }
+    if(++tries>120) clearInterval(iv);
+  },1000);
+})();
+</script>
 </body>
 </html>
